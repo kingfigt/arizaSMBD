@@ -1,0 +1,62 @@
+**1. Latar Belakang**
+
+Dalam masyarakat berbasis informasi, sistem basis data merupakan suatu komponen penting pada sebuah sistem informasi manajemen. Suatu sistem besar, yang setiap hari berinteraksi, selalu membutuhkan informasi yang selalu up-to-date dan tepat waktu dalam pengelolaan manajemen data dan informasi. Basis data dan Sistem Manajemen Basis Data (SMBD) / Database Management System (DBMS) dapat menyediakan sarana infrastruktur pada suatu sistem yang dibangun.
+Sistem manajemen basis data merupakan perangkat lunak yang dapat digunakan untuk mendefinisikan, menciptakan, mengelola dan mengendalikan pengaksesan basis data. Tugas dari sistem manajemen basis data adalah menyediakan lingkungan yang nyaman dan efisien untuk penyimpanan dan pengambilan data dari basis data. Pengelolaan manajemen basis data membutuhkan suatu perangkat / tools untuk dapat mengelolanya, sehingga manajemen basis data dapat terus dikelola dan terus ditingkatkan kinerjanya.
+
+**2. Problem yang diangkat**
+
+- Perbedaan database relational dan unrelational dan kapaan saatnya digunakan. 
+
+- Penginstalan mysql dari 0.
+
+- Perubahan konfigurasi default.
+
+- Mengamankan database dengan mengubah password root.
+
+- Membuat database sesuai nama kelompok menggunakan terminal/command prompt.
+Po
+**3. Solusi/skenario aktivitas**
+
+1. Database Relational (RDBMS)
+Database relational menyimpan data dalam bentuk tabel dengan relasi antar tabel 
+
+Contoh: MySQL, Microsoft SQL Server, PostgreSQL
+
+Database Relational digunakan saat aplikasi membutuhkan struktur data yang terorganisir, konsistensi tinggi, dan hubungan antar data yang kompleks.
+
+2. Database Unrelational(NoSQL)
+Database Unrelational menyimpan data dalam  bentuk fleksibel seperti dokumen, key value, atau graph.
+
+Contoh: MongoDB, Redis, Apache Cassandra
+
+Data tidak memiliki skema tetap, Memerlukan Performa tinggi dan skalabilitas besar, Query kompleks tidak menjadi prioritas utama (karena tidak mendukung SQL secara penuh)
+
+**4. Pembahasan**
+
+**Hasil konfigurasi & Uji coba**
+- Mengubah Port dari dari default 3306 menjadi 3309
+
+  **netstat -an | find "3309"**
+
+- Buffer pool berhasil diperbesar, dicek dengan perintah:
+
+  **SHOW VARIABLES LIKE 'innodb_buffer_pool_size';**
+
+- Password root berhasil, diverifikasi dengan login ulang.
+
+- Database berhasil dibuat, diverifikasi dengan perintah:
+
+  **SHOW DATABASES**
+**5. Kesimpulan**
+
+- Database relasionaldigunakan untuk data terstruktur, sementara database Unrelasional digunakan untuk data fleksibel
+
+- Instalasi MySQL berjalan dengan baik dan server dikonfigurasi sesuai kebutuhan.
+
+- Konfigurasi berhasil diterapkan, termasuk perubahan port, buffer pool, dan password root. 
+
+- Database berhasil dibuat menggunakian command prompt.
+
+**6. Bukti Dukung**
+- sebelum perubahan port
+  ![image]()
